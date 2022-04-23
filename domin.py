@@ -3,9 +3,8 @@ import colorama
 
 colorama.init()
 gr = colorama.Fore.GREEN
-red = colorama.Fore.RED
 reset = colorama.Fore.RESET
-print (gr,"""
+print (gr,""" [Running]
 
             _         _     
            | |       | |    
@@ -33,7 +32,7 @@ def get(domain):
         file1 = file.write(i['name_value']+'\n')
      return i
 
-url = input('Enter domain Here : '+red)
+url = input('Enter domain Here => example.com <: ')
 lines_seen = set(get(url))
 with open("subdomains.txt", "r+") as f:
     d = f.readlines()
