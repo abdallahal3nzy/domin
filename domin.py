@@ -27,8 +27,7 @@ def get(domain):
      sendar = requests.get(url, headers=headers).json()
      file = open('subdomains.txt', 'w')
      for i in sendar:
-        print(gr,i['name_value'], reset)
-
+        #print(gr,i['name_value'], reset)
         file1 = file.write(i['name_value']+'\n')
      return i
 
@@ -42,3 +41,6 @@ with open("subdomains.txt", "r+") as f:
             f.write(i)
             lines_seen.add(i)
     f.truncate()
+ss = open('subdomains.txt', 'r')
+print(gr ,ss.read() ,reset)
+ss.close()
